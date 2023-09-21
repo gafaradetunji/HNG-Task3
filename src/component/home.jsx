@@ -88,7 +88,7 @@ const Home = () => {
   return (
     <div>
       <Navbar onSearch={handleSearch} />
-          <div className='grid grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6'>
             <DndContext collisionDetection={closestCenter} sensors={sensors} onDragEnd={onDragEnd}>
               <SortableContext items={images} strategy={rectSortingStrategy}>
                   {images.map((imageUrl) => (
