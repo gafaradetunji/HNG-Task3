@@ -45,7 +45,7 @@ const Home = () => {
     useEffect(() => {
         const baseUrl = 'https://api.pexels.com/v1/'
         const headers = {
-            Authorization: 'C0rEKlnYWl6PVSS52VV2K5TE57RDHIxGNNY8q2XWVR0XX2Nq1VbLgztt',
+            Authorization: import.meta.env.VITE_PEXELS_API_KEY,
         }
         axios.get(`${baseUrl}curated?per_page=1&per_page=50`, {headers})
          .then(res => {
